@@ -1,0 +1,47 @@
+cmake_minimum_required(VERSION 3.16)
+project(OrderBook CXX)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Release)
+endif()
+
+option(SANITIZE "Build with ASan+UBSan" OFF)
+option(TSAN "Build with ThreadSanitizer" OFF)
+option(USE_STD_MAP "Use std::unordered_map for the order-id index" OFF)
+
+add_compile_options(-Wall -Wextra -march=native)
+if(SANITIZE)
+    add_compile_options(-fsanitize=address, undefined -fno-omit-frame-pointer)
+    add_link_options(-fsanitize=address, undefined)
+endif()
+if(TSAN)
+    add_compile_options(-fsanitize=thread)
+    add_link_options(-fsanitize=thread)
+endif()
+if(USE_STD_MAP)
+    add_compile_definitions(USE_STD_MAP)
+endif()
+
+find_package(Threads REQUIRED)
+include_directories(${CMAKE_SOURCE_DIR}/include)
+
+function(add_tool name)
+    if(EXISTS ${CMAKE_SOURCE_DIR}/src/${name}.cpp)
+        add_executable(${name} src/${name}.cpp)
+        target_link_libraries(${name} PRIVATE Threads::Threads)
+    endif()
+endfunction()
+
+enable_testing()
+
+function(add_unit_test name)
+    if(EXISTS ${CMAKE_SOURCE_DIR}/tests/${name}.cpp)
+        add_executable(${name} tests/${name}.cpp)
+        target_link_libraries(${name} PRIVATE Threads::Threads)
+        add_test(NAME ${name} COMMAND ${name})
+    endif()
+endfunction()
