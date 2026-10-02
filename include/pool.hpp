@@ -17,14 +17,14 @@ namespace book {
         );
     private:
         std::size_t capacity_;
-        std::size_t bytes = 0;
+        std::size_t bytes_ = 0;
         std::size_t in_use_ = 0;
         unsigned char* mem_ = nullptr;
         FreeNode* free_ = nullptr;
     public:
         explicit Pool(std::size_t capacity) : capacity_(capacity) {
             constexpr std::size_t kHuge = 2u << 20;
-            bytes_ = (capacity * sizeof(t) + kHuge - 1) / kHuge * kHuge;
+            bytes_ = (capacity * sizeof(T) + kHuge - 1) / kHuge * kHuge;
             mem_ = static_cast<unsigned char*>(std::aligned_alloc(kHuge, bytes_));
 
             if(!mem_)
@@ -62,5 +62,5 @@ namespace book {
 
         std::size_t in_use() const { return in_use_;}
         std::size_t capacity() const { return capacity_;}
-    }
+    };
 }

@@ -126,6 +126,80 @@ depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+#=============================================================================
+# Target rules for targets named test_pool_map
+
+# Build rule for target.
+test_pool_map: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_pool_map
+.PHONY : test_pool_map
+
+# fast build rule for target.
+test_pool_map/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pool_map.dir/build.make CMakeFiles/test_pool_map.dir/build
+.PHONY : test_pool_map/fast
+
+#=============================================================================
+# Target rules for targets named test_book
+
+# Build rule for target.
+test_book: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_book
+.PHONY : test_book
+
+# fast build rule for target.
+test_book/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_book.dir/build.make CMakeFiles/test_book.dir/build
+.PHONY : test_book/fast
+
+tests/test_book.o: tests/test_book.cpp.o
+.PHONY : tests/test_book.o
+
+# target to build an object file
+tests/test_book.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_book.dir/build.make CMakeFiles/test_book.dir/tests/test_book.cpp.o
+.PHONY : tests/test_book.cpp.o
+
+tests/test_book.i: tests/test_book.cpp.i
+.PHONY : tests/test_book.i
+
+# target to preprocess a source file
+tests/test_book.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_book.dir/build.make CMakeFiles/test_book.dir/tests/test_book.cpp.i
+.PHONY : tests/test_book.cpp.i
+
+tests/test_book.s: tests/test_book.cpp.s
+.PHONY : tests/test_book.s
+
+# target to generate assembly for a file
+tests/test_book.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_book.dir/build.make CMakeFiles/test_book.dir/tests/test_book.cpp.s
+.PHONY : tests/test_book.cpp.s
+
+tests/test_pool_map.o: tests/test_pool_map.cpp.o
+.PHONY : tests/test_pool_map.o
+
+# target to build an object file
+tests/test_pool_map.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pool_map.dir/build.make CMakeFiles/test_pool_map.dir/tests/test_pool_map.cpp.o
+.PHONY : tests/test_pool_map.cpp.o
+
+tests/test_pool_map.i: tests/test_pool_map.cpp.i
+.PHONY : tests/test_pool_map.i
+
+# target to preprocess a source file
+tests/test_pool_map.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pool_map.dir/build.make CMakeFiles/test_pool_map.dir/tests/test_pool_map.cpp.i
+.PHONY : tests/test_pool_map.cpp.i
+
+tests/test_pool_map.s: tests/test_pool_map.cpp.s
+.PHONY : tests/test_pool_map.s
+
+# target to generate assembly for a file
+tests/test_pool_map.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pool_map.dir/build.make CMakeFiles/test_pool_map.dir/tests/test_pool_map.cpp.s
+.PHONY : tests/test_pool_map.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -135,6 +209,14 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... test_book"
+	@echo "... test_pool_map"
+	@echo "... tests/test_book.o"
+	@echo "... tests/test_book.i"
+	@echo "... tests/test_book.s"
+	@echo "... tests/test_pool_map.o"
+	@echo "... tests/test_pool_map.i"
+	@echo "... tests/test_pool_map.s"
 .PHONY : help
 
 

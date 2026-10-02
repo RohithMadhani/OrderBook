@@ -45,3 +45,6 @@ function(add_unit_test name)
         add_test(NAME ${name} COMMAND ${name})
     endif()
 endfunction()
+
+add_unit_test(test_pool_map)
+add_unit_test(test_book)

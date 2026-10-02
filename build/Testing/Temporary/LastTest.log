@@ -1,0 +1,35 @@
+Start testing: Oct 02 19:03 UTC
+----------------------------------------------------------
+1/2 Testing: test_pool_map
+1/2 Test: test_pool_map
+Command: "/home/rohith/hft-book/OrderBook/build/test_pool_map"
+Directory: /home/rohith/hft-book/OrderBook/build
+"test_pool_map" start time: Oct 02 19:03 UTC
+Output:
+----------------------------------------------------------
+test_pool_map: OK
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"test_pool_map" end time: Oct 02 19:03 UTC
+"test_pool_map" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/2 Testing: test_book
+2/2 Test: test_book
+Command: "/home/rohith/hft-book/OrderBook/build/test_book"
+Directory: /home/rohith/hft-book/OrderBook/build
+"test_book" start time: Oct 02 19:03 UTC
+Output:
+----------------------------------------------------------
+test_book : OK
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"test_book" end time: Oct 02 19:03 UTC
+"test_book" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 02 19:03 UTC
