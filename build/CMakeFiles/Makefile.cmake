@@ -49,4 +49,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/test_pool_map.dir/DependInfo.cmake"
   "CMakeFiles/test_book.dir/DependInfo.cmake"
+  "CMakeFiles/test_itch.dir/DependInfo.cmake"
   )

@@ -48,3 +48,4 @@ endfunction()
 
 add_unit_test(test_pool_map)
 add_unit_test(test_book)
+add_unit_test(test_itch)

@@ -1,3 +1,4 @@
-test_pool_map 3 0.0164374
-test_book 1 0.054746
+test_pool_map 5 0.0101323
+test_book 3 0.0212135
+test_itch 1 0.0165142
 ---

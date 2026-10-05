@@ -60,7 +60,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/rohith/hft-book/OrderBook
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rohith/hft-book/OrderBook/build
+CMAKE_BINARY_DIR = /home/rohith/hft-book/OrderBook/build_san
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -97,9 +97,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rohith/hft-book/OrderBook/build/CMakeFiles /home/rohith/hft-book/OrderBook/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rohith/hft-book/OrderBook/build_san/CMakeFiles /home/rohith/hft-book/OrderBook/build_san//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rohith/hft-book/OrderBook/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rohith/hft-book/OrderBook/build_san/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

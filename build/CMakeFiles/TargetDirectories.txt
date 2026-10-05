@@ -1,5 +1,6 @@
 /home/rohith/hft-book/OrderBook/build/CMakeFiles/test_pool_map.dir
 /home/rohith/hft-book/OrderBook/build/CMakeFiles/test_book.dir
+/home/rohith/hft-book/OrderBook/build/CMakeFiles/test_itch.dir
 /home/rohith/hft-book/OrderBook/build/CMakeFiles/test.dir
 /home/rohith/hft-book/OrderBook/build/CMakeFiles/edit_cache.dir
 /home/rohith/hft-book/OrderBook/build/CMakeFiles/rebuild_cache.dir
