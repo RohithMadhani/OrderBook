@@ -1,1 +1,0 @@
-/usr/bin/c++ -g -fsanitize=address, undefined CMakeFiles/test_itch.dir/tests/test_itch.cpp.o -o test_itch 
