@@ -46,6 +46,10 @@ function(add_unit_test name)
     endif()
 endfunction()
 
+add_tool(bench)
+add_tool(gen_itch)
+
 add_unit_test(test_pool_map)
 add_unit_test(test_book)
 add_unit_test(test_itch)
+add_unit_test(test_spsc)

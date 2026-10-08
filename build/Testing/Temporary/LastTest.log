@@ -1,10 +1,10 @@
-Start testing: Oct 05 07:31 UTC
+Start testing: Oct 05 17:21 UTC
 ----------------------------------------------------------
-1/3 Testing: test_pool_map
-1/3 Test: test_pool_map
+1/4 Testing: test_pool_map
+1/4 Test: test_pool_map
 Command: "/home/rohith/hft-book/OrderBook/build/test_pool_map"
 Directory: /home/rohith/hft-book/OrderBook/build
-"test_pool_map" start time: Oct 05 07:31 UTC
+"test_pool_map" start time: Oct 05 17:21 UTC
 Output:
 ----------------------------------------------------------
 test_pool_map: OK
@@ -12,15 +12,15 @@ test_pool_map: OK
 Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"test_pool_map" end time: Oct 05 07:31 UTC
+"test_pool_map" end time: Oct 05 17:21 UTC
 "test_pool_map" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-2/3 Testing: test_book
-2/3 Test: test_book
+2/4 Testing: test_book
+2/4 Test: test_book
 Command: "/home/rohith/hft-book/OrderBook/build/test_book"
 Directory: /home/rohith/hft-book/OrderBook/build
-"test_book" start time: Oct 05 07:31 UTC
+"test_book" start time: Oct 05 17:21 UTC
 Output:
 ----------------------------------------------------------
 test_book : OK
@@ -28,15 +28,15 @@ test_book : OK
 Test time =   0.06 sec
 ----------------------------------------------------------
 Test Passed.
-"test_book" end time: Oct 05 07:31 UTC
+"test_book" end time: Oct 05 17:21 UTC
 "test_book" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-3/3 Testing: test_itch
-3/3 Test: test_itch
+3/4 Testing: test_itch
+3/4 Test: test_itch
 Command: "/home/rohith/hft-book/OrderBook/build/test_itch"
 Directory: /home/rohith/hft-book/OrderBook/build
-"test_itch" start time: Oct 05 07:31 UTC
+"test_itch" start time: Oct 05 17:21 UTC
 Output:
 ----------------------------------------------------------
 test_itch: OK
@@ -44,8 +44,24 @@ test_itch: OK
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"test_itch" end time: Oct 05 07:31 UTC
+"test_itch" end time: Oct 05 17:21 UTC
 "test_itch" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Oct 05 07:31 UTC
+4/4 Testing: test_spsc
+4/4 Test: test_spsc
+Command: "/home/rohith/hft-book/OrderBook/build/test_spsc"
+Directory: /home/rohith/hft-book/OrderBook/build
+"test_spsc" start time: Oct 05 17:21 UTC
+Output:
+----------------------------------------------------------
+test_spsc: OK
+<end of output>
+Test time =   0.10 sec
+----------------------------------------------------------
+Test Passed.
+"test_spsc" end time: Oct 05 17:21 UTC
+"test_spsc" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 05 17:21 UTC

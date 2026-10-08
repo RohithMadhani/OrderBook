@@ -47,7 +47,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/bench.dir/DependInfo.cmake"
+  "CMakeFiles/gen_itch.dir/DependInfo.cmake"
   "CMakeFiles/test_pool_map.dir/DependInfo.cmake"
   "CMakeFiles/test_book.dir/DependInfo.cmake"
   "CMakeFiles/test_itch.dir/DependInfo.cmake"
+  "CMakeFiles/test_spsc.dir/DependInfo.cmake"
   )

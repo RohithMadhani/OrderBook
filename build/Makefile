@@ -127,6 +127,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named bench
+
+# Build rule for target.
+bench: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bench
+.PHONY : bench
+
+# fast build rule for target.
+bench/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench.dir/build.make CMakeFiles/bench.dir/build
+.PHONY : bench/fast
+
+#=============================================================================
+# Target rules for targets named gen_itch
+
+# Build rule for target.
+gen_itch: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gen_itch
+.PHONY : gen_itch
+
+# fast build rule for target.
+gen_itch/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gen_itch.dir/build.make CMakeFiles/gen_itch.dir/build
+.PHONY : gen_itch/fast
+
+#=============================================================================
 # Target rules for targets named test_pool_map
 
 # Build rule for target.
@@ -164,6 +190,67 @@ test_itch: cmake_check_build_system
 test_itch/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_itch.dir/build.make CMakeFiles/test_itch.dir/build
 .PHONY : test_itch/fast
+
+#=============================================================================
+# Target rules for targets named test_spsc
+
+# Build rule for target.
+test_spsc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_spsc
+.PHONY : test_spsc
+
+# fast build rule for target.
+test_spsc/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_spsc.dir/build.make CMakeFiles/test_spsc.dir/build
+.PHONY : test_spsc/fast
+
+src/bench.o: src/bench.cpp.o
+.PHONY : src/bench.o
+
+# target to build an object file
+src/bench.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench.dir/build.make CMakeFiles/bench.dir/src/bench.cpp.o
+.PHONY : src/bench.cpp.o
+
+src/bench.i: src/bench.cpp.i
+.PHONY : src/bench.i
+
+# target to preprocess a source file
+src/bench.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench.dir/build.make CMakeFiles/bench.dir/src/bench.cpp.i
+.PHONY : src/bench.cpp.i
+
+src/bench.s: src/bench.cpp.s
+.PHONY : src/bench.s
+
+# target to generate assembly for a file
+src/bench.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench.dir/build.make CMakeFiles/bench.dir/src/bench.cpp.s
+.PHONY : src/bench.cpp.s
+
+src/gen_itch.o: src/gen_itch.cpp.o
+.PHONY : src/gen_itch.o
+
+# target to build an object file
+src/gen_itch.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gen_itch.dir/build.make CMakeFiles/gen_itch.dir/src/gen_itch.cpp.o
+.PHONY : src/gen_itch.cpp.o
+
+src/gen_itch.i: src/gen_itch.cpp.i
+.PHONY : src/gen_itch.i
+
+# target to preprocess a source file
+src/gen_itch.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gen_itch.dir/build.make CMakeFiles/gen_itch.dir/src/gen_itch.cpp.i
+.PHONY : src/gen_itch.cpp.i
+
+src/gen_itch.s: src/gen_itch.cpp.s
+.PHONY : src/gen_itch.s
+
+# target to generate assembly for a file
+src/gen_itch.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gen_itch.dir/build.make CMakeFiles/gen_itch.dir/src/gen_itch.cpp.s
+.PHONY : src/gen_itch.cpp.s
 
 tests/test_book.o: tests/test_book.cpp.o
 .PHONY : tests/test_book.o
@@ -237,6 +324,30 @@ tests/test_pool_map.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pool_map.dir/build.make CMakeFiles/test_pool_map.dir/tests/test_pool_map.cpp.s
 .PHONY : tests/test_pool_map.cpp.s
 
+tests/test_spsc.o: tests/test_spsc.cpp.o
+.PHONY : tests/test_spsc.o
+
+# target to build an object file
+tests/test_spsc.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_spsc.dir/build.make CMakeFiles/test_spsc.dir/tests/test_spsc.cpp.o
+.PHONY : tests/test_spsc.cpp.o
+
+tests/test_spsc.i: tests/test_spsc.cpp.i
+.PHONY : tests/test_spsc.i
+
+# target to preprocess a source file
+tests/test_spsc.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_spsc.dir/build.make CMakeFiles/test_spsc.dir/tests/test_spsc.cpp.i
+.PHONY : tests/test_spsc.cpp.i
+
+tests/test_spsc.s: tests/test_spsc.cpp.s
+.PHONY : tests/test_spsc.s
+
+# target to generate assembly for a file
+tests/test_spsc.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_spsc.dir/build.make CMakeFiles/test_spsc.dir/tests/test_spsc.cpp.s
+.PHONY : tests/test_spsc.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -246,9 +357,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... bench"
+	@echo "... gen_itch"
 	@echo "... test_book"
 	@echo "... test_itch"
 	@echo "... test_pool_map"
+	@echo "... test_spsc"
+	@echo "... src/bench.o"
+	@echo "... src/bench.i"
+	@echo "... src/bench.s"
+	@echo "... src/gen_itch.o"
+	@echo "... src/gen_itch.i"
+	@echo "... src/gen_itch.s"
 	@echo "... tests/test_book.o"
 	@echo "... tests/test_book.i"
 	@echo "... tests/test_book.s"
@@ -258,6 +378,9 @@ help:
 	@echo "... tests/test_pool_map.o"
 	@echo "... tests/test_pool_map.i"
 	@echo "... tests/test_pool_map.s"
+	@echo "... tests/test_spsc.o"
+	@echo "... tests/test_spsc.i"
+	@echo "... tests/test_spsc.s"
 .PHONY : help
 
 

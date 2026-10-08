@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/gen_itch.dir/src/gen_itch.cpp.o -o gen_itch 

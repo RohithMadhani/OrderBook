@@ -63,9 +63,12 @@ CMAKE_BINARY_DIR = /home/rohith/hft-book/OrderBook/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/bench.dir/all
+all: CMakeFiles/gen_itch.dir/all
 all: CMakeFiles/test_pool_map.dir/all
 all: CMakeFiles/test_book.dir/all
 all: CMakeFiles/test_itch.dir/all
+all: CMakeFiles/test_spsc.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -73,10 +76,65 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/bench.dir/clean
+clean: CMakeFiles/gen_itch.dir/clean
 clean: CMakeFiles/test_pool_map.dir/clean
 clean: CMakeFiles/test_book.dir/clean
 clean: CMakeFiles/test_itch.dir/clean
+clean: CMakeFiles/test_spsc.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/bench.dir
+
+# All Build rule for target.
+CMakeFiles/bench.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench.dir/build.make CMakeFiles/bench.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench.dir/build.make CMakeFiles/bench.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rohith/hft-book/OrderBook/build/CMakeFiles --progress-num=1,2 "Built target bench"
+.PHONY : CMakeFiles/bench.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/bench.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rohith/hft-book/OrderBook/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/bench.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rohith/hft-book/OrderBook/build/CMakeFiles 0
+.PHONY : CMakeFiles/bench.dir/rule
+
+# Convenience name for target.
+bench: CMakeFiles/bench.dir/rule
+.PHONY : bench
+
+# clean rule for target.
+CMakeFiles/bench.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench.dir/build.make CMakeFiles/bench.dir/clean
+.PHONY : CMakeFiles/bench.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/gen_itch.dir
+
+# All Build rule for target.
+CMakeFiles/gen_itch.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gen_itch.dir/build.make CMakeFiles/gen_itch.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gen_itch.dir/build.make CMakeFiles/gen_itch.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rohith/hft-book/OrderBook/build/CMakeFiles --progress-num=3,4 "Built target gen_itch"
+.PHONY : CMakeFiles/gen_itch.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/gen_itch.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rohith/hft-book/OrderBook/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/gen_itch.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rohith/hft-book/OrderBook/build/CMakeFiles 0
+.PHONY : CMakeFiles/gen_itch.dir/rule
+
+# Convenience name for target.
+gen_itch: CMakeFiles/gen_itch.dir/rule
+.PHONY : gen_itch
+
+# clean rule for target.
+CMakeFiles/gen_itch.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gen_itch.dir/build.make CMakeFiles/gen_itch.dir/clean
+.PHONY : CMakeFiles/gen_itch.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/test_pool_map.dir
@@ -85,7 +143,7 @@ clean: CMakeFiles/test_itch.dir/clean
 CMakeFiles/test_pool_map.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pool_map.dir/build.make CMakeFiles/test_pool_map.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pool_map.dir/build.make CMakeFiles/test_pool_map.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rohith/hft-book/OrderBook/build/CMakeFiles --progress-num=5,6 "Built target test_pool_map"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rohith/hft-book/OrderBook/build/CMakeFiles --progress-num=9,10 "Built target test_pool_map"
 .PHONY : CMakeFiles/test_pool_map.dir/all
 
 # Build rule for subdir invocation for target.
@@ -111,7 +169,7 @@ CMakeFiles/test_pool_map.dir/clean:
 CMakeFiles/test_book.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_book.dir/build.make CMakeFiles/test_book.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_book.dir/build.make CMakeFiles/test_book.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rohith/hft-book/OrderBook/build/CMakeFiles --progress-num=1,2 "Built target test_book"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rohith/hft-book/OrderBook/build/CMakeFiles --progress-num=5,6 "Built target test_book"
 .PHONY : CMakeFiles/test_book.dir/all
 
 # Build rule for subdir invocation for target.
@@ -137,7 +195,7 @@ CMakeFiles/test_book.dir/clean:
 CMakeFiles/test_itch.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_itch.dir/build.make CMakeFiles/test_itch.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_itch.dir/build.make CMakeFiles/test_itch.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rohith/hft-book/OrderBook/build/CMakeFiles --progress-num=3,4 "Built target test_itch"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rohith/hft-book/OrderBook/build/CMakeFiles --progress-num=7,8 "Built target test_itch"
 .PHONY : CMakeFiles/test_itch.dir/all
 
 # Build rule for subdir invocation for target.
@@ -155,6 +213,32 @@ test_itch: CMakeFiles/test_itch.dir/rule
 CMakeFiles/test_itch.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_itch.dir/build.make CMakeFiles/test_itch.dir/clean
 .PHONY : CMakeFiles/test_itch.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_spsc.dir
+
+# All Build rule for target.
+CMakeFiles/test_spsc.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_spsc.dir/build.make CMakeFiles/test_spsc.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_spsc.dir/build.make CMakeFiles/test_spsc.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rohith/hft-book/OrderBook/build/CMakeFiles --progress-num=11,12 "Built target test_spsc"
+.PHONY : CMakeFiles/test_spsc.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_spsc.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rohith/hft-book/OrderBook/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_spsc.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rohith/hft-book/OrderBook/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_spsc.dir/rule
+
+# Convenience name for target.
+test_spsc: CMakeFiles/test_spsc.dir/rule
+.PHONY : test_spsc
+
+# clean rule for target.
+CMakeFiles/test_spsc.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_spsc.dir/build.make CMakeFiles/test_spsc.dir/clean
+.PHONY : CMakeFiles/test_spsc.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
